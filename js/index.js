@@ -12,7 +12,7 @@ ws.onopen = function () {
 };
 
 var heartCheck = {
-    timeout: 1000,//9ms
+    timeout: 50000,//50ms
     timeoutObj: null,
     reset: function () {
         clearTimeout(this.timeoutObj);
