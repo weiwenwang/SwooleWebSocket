@@ -2,8 +2,13 @@
 
 $server = new swoole_websocket_server("0.0.0.0", 9502);//0.0.0.0表示广播消息； 9502是刚才前端页面中定好的通信端口
 
+$server->set(array(
+    'heartbeat_check_interval' => 3,
+    'heartbeat_idle_time' => 5,
+));
+
 $server->on('open', function (swoole_websocket_server $server, $request) {
-    var_dump($request);
+//    var_dump($request);
     echo "server: handshake success with fd{$request->fd}\n";//$request->fd 是客户端id
 
 });
@@ -18,7 +23,9 @@ $server->on('message', function (swoole_websocket_server $server, $frame) {
     $data = $frame->data;
     foreach ($server->connections as $fd) {
         if ($fd != $frame->fd) { // 不要发给自己
-            $server->push($fd, $data);//循环广播
+	    if (substr($data, 0, 9) != 'HeartBeat') {
+		$server->push($fd, $data);//循环广播
+            }
         }
     }
 
