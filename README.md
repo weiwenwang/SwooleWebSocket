@@ -17,3 +17,7 @@
   - 自动重连
 
   - 未发出的数据提示用户
+
+### view
+
+![image](https://github.com/weiwenwang/SwooleWebSocket/blob/master/img/chat_view.png)
