@@ -22,4 +22,4 @@
 
 ### view
 
-![image](https://github.com/weiwenwang/SwooleWebSocket/blob/master/img/chat_view.png)
+![image](https://github.com/weiwenwang/SwooleWebSocket/blob/master/frontend/web/img/chat_view.png)
