@@ -2,21 +2,23 @@
 
   -服务端用的是swoole,目前支持:
  
-  - 群聊
-  - 有退出聊天
-  - 心跳检测(server端60s,收不到消息就关闭连接,client每50s,主动发一次消息)
+  - 群聊(todo)
   
-### TODO
+  - add yii2.0(done)
   
-  - 登录聊天
+  - 与在线的好友一对一(done)
+
+  - 心跳检测(todo)
+    
+  - 登录才能进入聊天界面(done)
   
   - 好友聊天
       
-  - add layui
+  - add layui（done）
 
-  - 自动重连
+  - 自动重连 (todo)
 
-  - 未发出的数据提示用户
+  - 未发出的数据提示用户 (todo)
 
 ### view
 
